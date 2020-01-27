@@ -38,7 +38,7 @@ public class FizzBuzzServiceTest {
 
     @ParameterizedTest
     @MethodSource("arguments")
-    void asasdfq(int input, String expected) throws IOException {
+    void allFizzBuzzTest(int input, String expected) throws IOException {
 
         FizzBuzzService fizzBuzzService = new FizzBuzzService();
 
