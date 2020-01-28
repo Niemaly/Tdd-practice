@@ -25,11 +25,20 @@ public class GoogleSumTaskTest {
 
     @ParameterizedTest
     @MethodSource(value = "argumentsStream")
-    void firstTest(int[] input, int orderedSum, String expectedString){
+    void brutalForceMethod(int[] input, int orderedSum, String expectedString){
 
         GoogleTaskImpl googleTaskImpl = new GoogleTaskImpl();
 
         assertTrue(googleTaskImpl.isThereOrderedSum_BrutalForceSolution(input, orderedSum).equals(expectedString));
+
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "argumentsStream")
+    void betterMethod(int[] input, int orderedSum, String expectedString){
+
+        GoogleTaskImpl googleTaskImpl = new GoogleTaskImpl();
+
         assertTrue(googleTaskImpl.isThereOrderedSum(input, orderedSum).equals(expectedString));
 
     }

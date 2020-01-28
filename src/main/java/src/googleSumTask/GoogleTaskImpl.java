@@ -2,10 +2,7 @@ package src.googleSumTask;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 public class GoogleTaskImpl {
     public String isThereOrderedSum_BrutalForceSolution(int[] input, int orderedSum) {
@@ -26,10 +23,13 @@ public class GoogleTaskImpl {
         }catch (NoSuchElementException e){
             return "NO";
         }
-
-
+        Arrays.sort(input);
 
         for (int i : input) {
+
+            if (i>orderedSum){
+                return "NO";
+            }
 
             long b = Arrays.stream(input).filter(e -> e == (orderedSum - i) || e == i).boxed().count();
             if (b > 1)
