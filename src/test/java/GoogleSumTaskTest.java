@@ -1,10 +1,8 @@
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import src.fizzBuzz.FizzBuzzService;
 import src.googleSumTask.GoogleTaskImpl;
 
-import java.io.IOException;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,7 +15,11 @@ public class GoogleSumTaskTest {
 
         return Stream.of(
                 Arguments.of(new int[]{1, 2, 3, 9}, 8,  "NO"),
-                Arguments.of(new int[]{1, 2, 4, 4}, 8,  "YES")
+                Arguments.of(new int[]{1, 2, 4, 4}, 8,  "YES"),
+                Arguments.of(new int[]{1}, 8,  "NO"),
+                Arguments.of(new int[]{1,1}, 2,  "YES"),
+                Arguments.of(new int[]{1100,1000}, 8,  "NO"),
+                Arguments.of(new int[]{}, 8,  "NO")
         );
     }
 
@@ -27,6 +29,7 @@ public class GoogleSumTaskTest {
 
         GoogleTaskImpl googleTaskImpl = new GoogleTaskImpl();
 
+        assertTrue(googleTaskImpl.isThereOrderedSum_BrutalForceSolution(input, orderedSum).equals(expectedString));
         assertTrue(googleTaskImpl.isThereOrderedSum(input, orderedSum).equals(expectedString));
 
     }
