@@ -21,9 +21,8 @@ public class StringUtilsTest {
                 Arguments.of("E"),
                 Arguments.of("i"),
                 Arguments.of("O"),
-                Arguments.of("U"),
-                Arguments.of("OO"),
-                Arguments.of("II")
+                Arguments.of("U")
+
         );
     }
 
