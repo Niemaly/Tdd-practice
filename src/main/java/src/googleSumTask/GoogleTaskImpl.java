@@ -18,7 +18,7 @@ public class GoogleTaskImpl {
     public String isThereOrderedSum(int[] input, int orderedSum) {
 
         try {
-            if (Arrays.stream(input).min().getAsInt() >= orderedSum || input.length<2)
+            if (Arrays.stream(input).min().getAsInt() >= orderedSum || input.length < 2)
                 return "NO";
         }catch (NoSuchElementException e){
             return "NO";
