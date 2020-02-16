@@ -1,7 +1,9 @@
+package googleTasksTests;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import src.googleSumTask.GoogleTaskImpl;
+import src.googleTasks.googleSumTask.GoogleTaskImpl;
 
 import java.util.stream.Stream;
 

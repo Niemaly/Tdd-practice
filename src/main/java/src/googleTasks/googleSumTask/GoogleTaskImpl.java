@@ -1,4 +1,4 @@
-package src.googleSumTask;
+package src.googleTasks.googleSumTask;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

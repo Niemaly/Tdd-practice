@@ -20,8 +20,6 @@ public class PandigitalTest {
                 Arguments.of(9999999999L, 1, new long[]{}),
                 Arguments.of(-123456789L, 1, new long[]{1023456789L})
                 );
-
-
     }
 
     @ParameterizedTest

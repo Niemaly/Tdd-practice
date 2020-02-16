@@ -1,3 +1,4 @@
+package fizzBuzzTest;
 
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.Arguments;
